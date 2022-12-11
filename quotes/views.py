@@ -25,3 +25,4 @@ class QuoteDetailView(APIView):
       except quote.DoesNotExist as e:
         print(e)
         raise NotFound(str(e))
+
