@@ -18,7 +18,8 @@ const Home = () => {
         <h1 className='display-3'>notes & quotes</h1>
       </div>
       <div className='home-article'>
-        <h2>welcome. what would you like to share?</h2>
+        <h2>welcome.</h2>
+      <div className='flex-container'>
         <div className='login-form-wrapper'>
           <form className='login-form' onSubmit={handleSubmit}>
             <label for='email'>email</label>
@@ -27,10 +28,12 @@ const Home = () => {
             <input type='password' placeholder='*******' id='password' name='password' />
             <button type='submit'>Log In</button>
           </form>
-          <button className='link-button'><Link to='/register'>don't have account yet? register here</Link></button>
+          <button className='link-button'><Link to='/register'>don't have account yet? sign up here</Link></button>
         </div>
         <div className='sample-quotes'>
+          <h4>test</h4>
         </div>
+      </div>
       </div>
       <footer>
         <p>if this is the bottom that means it's only up from here 🌱</p>

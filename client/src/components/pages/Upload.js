@@ -11,7 +11,7 @@ const Upload = () => {
       <h1 className='display-3'>notes & quotes</h1>
     </div>
     <div className='home-article'>
-      <h2>welcome. what will you add to the story?</h2>
+      <h2>welcome</h2>
       <div className='sample-quotes'>
       </div>
       <textarea

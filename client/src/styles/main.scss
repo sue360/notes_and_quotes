@@ -40,11 +40,9 @@ h2{
   background-color: rgba(172, 188, 186, 0.5);
   padding: 30px;
   margin-left: 50px;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 200px;
   border-radius: 10px;
-  border-radius: 10px;
-
 }
 
 .login-form {
@@ -123,4 +121,23 @@ textarea {
   height: 50px;
   background-color: whitesmoke;
   border-radius: 10px;
+}
+
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.sample-quotes{
+  background-color: aqua;
+  width: 40%;
+  background-image: url('../components/images/notes_and_quotes_two_books.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 50px;
 }
