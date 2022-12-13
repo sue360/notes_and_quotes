@@ -1,0 +1,34 @@
+[
+{
+  "model": "notes.notes",
+  "pk": 1,
+  "fields": {
+    "Content": "Today I’m thankful for the time and space to learn new skills. Winters can be tough but learning to code keeps things moving. Great to feel that I’m still growing and to meet and work with new people too.",
+    "Created_at": "2022-12-13T21:42:39Z"
+  }
+},
+{
+  "model": "notes.notes",
+  "pk": 2,
+  "fields": {
+    "Content": "Today I’m looking forward to a cheerful Christmas with my extended family - our first one together since the pandemic. Sharing quality time with loved ones is >>>. Took a pandemic for me to appreciate it more!",
+    "Created_at": "2022-12-13T21:43:07Z"
+  }
+},
+{
+  "model": "notes.notes",
+  "pk": 3,
+  "fields": {
+    "Content": "Today I’m thankful for the random stranger who returned my wallet after I left it on the train. Had all my cards - including a keycard for my room - in it. Faith in humanity restored!",
+    "Created_at": "2022-12-13T21:43:29Z"
+  }
+},
+{
+  "model": "notes.notes",
+  "pk": 4,
+  "fields": {
+    "Content": "Today I’m thankful for the snow. This needs no further explanation. Snow time like the present.",
+    "Created_at": "2022-12-13T21:43:49Z"
+  }
+}
+]

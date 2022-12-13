@@ -1,0 +1,47 @@
+[
+{
+  "model": "quotes.quotes",
+  "pk": 1,
+  "fields": {
+    "Content": "\"We lose ourselves in what we read, only to return to ourselves, transformed and part of a more expansive world\" - Judith Butler",
+    "Created_at": "2022-12-13T12:52:43Z",
+    "Background_info": "..."
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 2,
+  "fields": {
+    "Content": "\"In order to go on living, one must try to escape the death involved in perfectionism.\"- Hannah Arendt",
+    "Created_at": "2022-12-13T12:53:07Z",
+    "Background_info": "..."
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 3,
+  "fields": {
+    "Content": "“You have power over your mind – not outside events. Realise this, and you will find strength.” Marcus Aurelius",
+    "Created_at": "2022-12-13T12:53:25Z",
+    "Background_info": "..."
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 4,
+  "fields": {
+    "Content": "“Not everything that is faced can be changed, but nothing can be changed until it is faced.” - James Baldwin",
+    "Created_at": "2022-12-13T12:53:43Z",
+    "Background_info": "..."
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 5,
+  "fields": {
+    "Content": "“In nature, nothing is perfect. Trees can be contorted, bent in weird ways and they're still beautiful.” ― Alice Walker",
+    "Created_at": "2022-12-13T12:54:01Z",
+    "Background_info": "..."
+  }
+}
+]
