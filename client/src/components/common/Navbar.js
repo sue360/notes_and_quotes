@@ -1,26 +1,33 @@
 // React Components
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+
 
 // Bootstrap Components
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 
-const PageNavbar = () => {
+const HomePageNavbar = () => {
+
+
   return (
-    <Navbar expand="sm">
-      <Container>
-        <Navbar.Brand as={Link} to="/">📝</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
-          <Nav>
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/Login">Login</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className='nav'>
+      <Link to ='/'>🖋</Link>
+      <ul className='navicons'>
+        <li>
+          <Link to='/register'>register |</Link>
+        </li>
+        <li>
+          <Link to= '/gallery'>gallery |</Link>
+        </li>
+        <li>
+          <Link to='/upload'>upload |</Link>
+        </li>
+      </ul>
+
+    </nav>
+
   )
 }
 
-export default PageNavbar
+export default HomePageNavbar
