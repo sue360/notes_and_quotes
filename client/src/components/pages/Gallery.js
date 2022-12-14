@@ -43,12 +43,13 @@ const Gallery = () => {
                 console.log(Content)
                 return (
                   <Col key={id} md='6' lg='4' className='note-card mb-4'>
+                    <Link to={`/notes/${id}/`}> 
                       <Card>
-                        <div className='card-image'></div>
                         <Card.Body>
                           <Card.Title className='mb-0'>{Content}</Card.Title>
                         </Card.Body>
                       </Card>
+                    </Link>   
                   </Col>
                 )
               })

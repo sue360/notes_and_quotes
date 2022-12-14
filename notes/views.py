@@ -52,7 +52,7 @@ class NoteDetailView(APIView):
           single_note = notes.objects.get_note(pk=pk)
           serialized_note = NoteSerializer(single_note)
           return Response(serialized_note.data)
-      except single_note.DoesNotExist as e:
+      except notes.DoesNotExist as e:
         print(e)
         raise NotFound(str(e))
 

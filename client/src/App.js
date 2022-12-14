@@ -5,6 +5,7 @@ import Upload from './components/pages/Upload'
 import Gallery from './components/pages/Gallery'
 import { Register } from './components/pages/auth/Register';
 import React, { useState } from 'react';
+import Singlenote from './components/pages/Singlenote';
 import './styles/main.scss';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/notes/:id" element={<Singlenote />} />
         </Routes>
       </BrowserRouter>
     </div>
