@@ -30,7 +30,6 @@ class NoteListView(APIView):
  
  
 
-
  
 #return a single note found to the user. endpoint: /notes/:id THIS WORKS
  
@@ -48,13 +47,10 @@ class NoteDetailView(APIView):
 
 
   def get(self, _request, pk):
-      try:
-          single_note = notes.objects.get_note(pk=pk)
-          serialized_note = NoteSerializer(single_note)
-          return Response(serialized_note.data)
-      except notes.DoesNotExist as e:
-        print(e)
-        raise NotFound(str(e))
+      single_note = self.get_note(pk)
+      serialized_single_note = NoteSerializer(single_note)
+      return Response(serialized_single_note.data)
+
 
   #updating a single note
   def put(self, request, pk):
