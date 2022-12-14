@@ -4,7 +4,7 @@ from django.db import models
 
 class notes(models.Model):
     Content = models.CharField(max_length=240)
-    Created_at = models.DateTimeField (max_length=50)
+    Created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.Content} - ({self.Created_at})"

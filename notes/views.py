@@ -13,23 +13,7 @@ class NoteListView(APIView):
      print(serialized_notes.data)
      return Response(serialized_notes.data, status.HTTP_200_OK)
  
- 
-#return all notes found to the user. endpoint: /notes
- 
-#return a single note found to the user. endpoint: /notes/:id
- 
-class NoteDetailView(APIView):
- def get(self, _request, pk):
-     try:
-         single_note = notes.objects.get(pk=pk)
-         serialized_note = NoteSerializer(single_note)
-         return Response(serialized_note.data)
-     except single_note.DoesNotExist as e:
-       print(e)
-       raise NotFound(str(e))
- 
- 
-#posting a new note
+ #posting a new note
  def post(self, request):
      print(request.data)
      note_to_add = NoteSerializer(data=request.data)
@@ -45,26 +29,53 @@ class NoteDetailView(APIView):
          return Response(str(e), status.HTTP_500_INTERNAL_SERVER_ERROR)
  
  
- #updating a single note
- def put(self, request, pk):
-     note = self.get(pk)
-     try:
-       note_to_update = NoteSerializer(note, request.data, partial=True)
-       if note_to_update.is_valid():
-           note_to_update.save()
-           return Response(note_to_update.data, status.HTTP_202_ACCEPTED)
-       print(note_to_update.errors)
-       return Response(note_to_update.errors, status.HTTP_422_UNPROCESSABLE_ENTITY)
-     except Exception as e:
-       return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR) 
 
-#delete a single note 
 
- def delete(self, _request, pk):
-       note_to_delete = self.get(pk)
-       try:
-           note_to_delete.delete()
-           return Response(status=status.HTTP_204_NO_CONTENT)
-       except Exception as e:
-           return Response(str(e), status.HTTP_500_INTERNAL_SERVER_ERROR)
+ 
+#return a single note found to the user. endpoint: /notes/:id THIS WORKS
+ 
+class NoteDetailView(APIView):
+  def get_note(self, pk):
+    try:
+        return notes.objects.get(pk=pk)
+    except notes.DoesNotExist as e:
+        print(e)
+        raise NotFound(str(e))
+    except Exception as e:
+        print(e)
+        return Response(str(e), status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+  def get(self, _request, pk):
+      try:
+          single_note = notes.objects.get_note(pk=pk)
+          serialized_note = NoteSerializer(single_note)
+          return Response(serialized_note.data)
+      except single_note.DoesNotExist as e:
+        print(e)
+        raise NotFound(str(e))
+
+  #updating a single note
+  def put(self, request, pk):
+      note = self.get_note(pk)
+      try:
+        note_to_update = NoteSerializer(note, request.data, partial=True)
+        if note_to_update.is_valid():
+            note_to_update.save()
+            return Response(note_to_update.data, status.HTTP_202_ACCEPTED)
+        print(note_to_update.errors)
+        return Response(note_to_update.errors, status.HTTP_422_UNPROCESSABLE_ENTITY)
+      except Exception as e:
+        return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR) 
+
+    #delete a single note 
+
+  def delete(self, _request, pk):
+        note_to_delete = self.get_note(pk)
+        try:
+            note_to_delete.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        except Exception as e:
+            return Response(str(e), status.HTTP_500_INTERNAL_SERVER_ERROR)
 

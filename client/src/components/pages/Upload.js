@@ -14,7 +14,12 @@ import Container from 'react-bootstrap/Container'
 
 const Upload = () => {
 
+
+  //for displaing quotes
   const [quotes, setQuotes] = useState([])
+  const [uploadField, setUploadField] = useState({
+    Content: '', //submitting new content
+  })
 
   useEffect(() => {
     const getQuotes = async () => {
@@ -29,32 +34,28 @@ const Upload = () => {
     getQuotes()
   }, [])
 
-  const [uploadField, setUploadField] = useState({
-    Content: '', //submitting to the content key
-  })
+
 
   const [error, setError] = useState('')
 
-  const handleChange = (e) => {
-    const updatedField = {
-      ...uploadField,
-      [e.target.name]: e.target.value,
-    }
-    setUploadField(updatedField)
+  //function to update state with uploads from the submit field
+  const handleContentChange = (e) => {
+    console.log('event', e)
+    setUploadField({Content: e.target.value})
   }
 
   //submit form
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    console.log(uploadField)
-    try {
-      await axios.post('/notes', uploadField)
-      console.log('post created')
+  const handleNoteSubmit = async () => {
+    try{
+      const { data } = await axios.post('/notes/', uploadField)
+      console.log(data)
+      setUploadField({Content: ''})
     } catch (err) {
-      console.log(err.response.data.message)
-      setError(err.response.data.message)
+      console.log(err)
     }
   }
+
+
 
   return (
     <main className='main'>
@@ -66,11 +67,13 @@ const Upload = () => {
         <div className='flex-container-quotes'>
           <div>
             <textarea
-              placeholder="what are you grateful for today?"
+              value={uploadField.Content}
+              onChange={handleContentChange}
+              placeholder="what are you thankful for today?"
               className="textarea"
             />
             <div>
-              <button className="create-note-button">
+              <button className="create-note-button" onClick={handleNoteSubmit}>
                 share note
               </button>
             </div>
@@ -101,7 +104,7 @@ const Upload = () => {
                 </Container>
               </div>
             </main>
-          
+
           </div>
         </div>
       </div>
