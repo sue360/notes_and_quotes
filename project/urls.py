@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('notes/', include('notes.urls')),
     path('quotes/', include('quotes.urls')),
+    path('auth/', include('jwt_auth.urls'))
 ]
