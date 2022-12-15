@@ -20,7 +20,7 @@ const Singlenote = () => {
     Content: '',
   })
 
-  //function to update state with uploades from the upload field
+  //function to update state with uploads from the upload field
   const handleContentUpdate = (e) => {
     console.log('event', e)
     setUpdateField({Content: e.target.value})
@@ -31,6 +31,16 @@ const Singlenote = () => {
       const { data } = await axios.put(`/notes/${id}/`, updateField)
       console.log(data)
       setUpdateField({Content: ''})
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  //function to delete the current note
+
+  const handleNoteDelete = async () => {
+    try{
+      await axios.delete(`/notes/${id}/`)
     } catch (err) {
       console.log(err)
     }
@@ -83,6 +93,11 @@ const Singlenote = () => {
                   <button className="create-note-button" onClick={handleNoteUpdate}>
                     update and share note
                   </button>
+                </div>
+                <div>
+                  <button className='delete-note-button' onClick={handleNoteDelete}>
+                    delete this note
+                    </button>
                 </div>
 
               </main>
