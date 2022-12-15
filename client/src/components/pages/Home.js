@@ -31,7 +31,6 @@ const Home = () => {
           <button className='link-button'><Link to='/register'>don't have account yet? sign up here</Link></button>
         </div>
         <div className='sample-quotes'>
-          <h4>test</h4>
         </div>
       </div>
       </div>

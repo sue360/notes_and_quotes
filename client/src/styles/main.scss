@@ -130,10 +130,14 @@ textarea {
   justify-content: space-between;
 }
 
+.register-flex-containter{
+  display: flex;
+}
+
 .sample-quotes{
   background-color: aqua;
   width: 40%;
-  background-image: url('../components/images/notes_and_quotes_two_books.png');
+  background-image: url('../components/images/Sue360_minimalist_tree_on_white_background_watercolour_1b0bf747-ba30-46c5-a063-c204232adbd8.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -167,7 +171,8 @@ textarea {
     height: 100px;
     color: grey;
     font-size: 100%;
-    padding: 50px;
+    padding: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
 
@@ -182,6 +187,17 @@ textarea {
 
 
 
+}
+
+.gallery-note-card {
+
+  border: rgb(226, 224, 224) 1px solid;
+  margin: 10px 200px 10px 200px;
+
+}
+
+.notes-container {
+  align-items: center;
 }
 
 .flex-container-quotes {

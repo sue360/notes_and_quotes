@@ -79,7 +79,7 @@ const Singlenote = () => {
                 }
               </Row>
             </Container>
-            <div className='flex-container-quotes'>
+            <div className='flex-container-update-notes'>
               <div>
                 <textarea
                   placeholder= 'add your updated note here'
@@ -97,8 +97,8 @@ const Singlenote = () => {
                 <div>
                   <button className='delete-note-button' onClick={handleNoteDelete}>
                     delete this note
-                    </button>
-                </div>
+                  </button>
+              </div>
 
               </main>
         )
