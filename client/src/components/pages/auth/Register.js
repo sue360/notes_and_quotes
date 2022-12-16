@@ -21,7 +21,7 @@ export const Register = () => {
   const handleSubmit = async(e) => {
     e.preventDefault()
     try {
-      const { data } = await axios.post('/auth/register/', formFields)
+      const { data } = await axios.post('/api/auth/register/', formFields)
       setToken(data.token)
       navigate('/gallery') //page to move on to
     } catch (err) {

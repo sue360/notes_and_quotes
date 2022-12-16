@@ -30,7 +30,7 @@ const Singlenote = () => {
 
   const handleNoteUpdate = async () => {
     try{
-      const { data } = await axios.put(`/notes/${id}/`, updateField)
+      const { data } = await axios.put(`/api/notes/${id}/`, updateField)
       console.log(data)
       setUpdateField({Content: ''})
       navigate('/gallery') //page to move on to
@@ -43,7 +43,7 @@ const Singlenote = () => {
 
   const handleNoteDelete = async () => {
     try{
-      await axios.delete(`/notes/${id}/`)
+      await axios.delete(`/api/notes/${id}/`)
        //page to move on to
     } catch (err) {
       console.log(err)
@@ -58,7 +58,7 @@ const Singlenote = () => {
   useEffect(() => {
     const getSingleNote = async () => {
       try {
-        const { data } = await axios.get(`/notes/${id}/`)
+        const { data } = await axios.get(`/api/notes/${id}/`)
         console.log(data)
         setSingleNote(data)
       } catch (err) {

@@ -25,7 +25,7 @@ const Upload = () => {
   useEffect(() => {
     const getQuotes = async () => {
       try {
-        const { data } = await axios.get('/quotes/')
+        const { data } = await axios.get('/api/quotes/')
         setQuotes(data)
         console.log(data)
       } catch (err) {
@@ -48,7 +48,7 @@ const Upload = () => {
   //submit form
   const handleNoteSubmit = async () => {
     try{
-      const { data } = await axios.post('/notes/', uploadField)
+      const { data } = await axios.post('/api/notes/', uploadField)
       console.log(data)
       setUploadField({Content: ''})
       navigate('/gallery') //page to move on to

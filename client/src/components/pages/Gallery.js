@@ -19,7 +19,7 @@ const Gallery = () => {
   useEffect(() => {
     const getNotes = async () => {
       try {
-        const { data } = await axios.get('/notes/')
+        const { data } = await axios.get('/api/notes/')
         setNotes(data)
         console.log(data)
       } catch (err) {
