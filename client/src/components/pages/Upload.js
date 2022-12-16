@@ -1,7 +1,8 @@
 // React Components
-import { Link } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link, useNavigate } from 'react-router-dom'
+
 
 //Imports from Bootstrap
 import Col from 'react-bootstrap/Col'
@@ -35,7 +36,7 @@ const Upload = () => {
   }, [])
 
 
-
+  const navigate = useNavigate()
   const [error, setError] = useState('')
 
   //function to update state with uploads from the submit field
@@ -50,6 +51,7 @@ const Upload = () => {
       const { data } = await axios.post('/notes/', uploadField)
       console.log(data)
       setUploadField({Content: ''})
+      navigate('/gallery') //page to move on to
     } catch (err) {
       console.log(err)
     }

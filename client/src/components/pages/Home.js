@@ -23,7 +23,7 @@ const Home = () => {
     try {
       const { data } = await axios.post('/auth/login/', formFields)
       setToken(data.token)
-      navigate('/gallery') //page to move on to
+      navigate('/upload') //page to move on to
     } catch (err) {
       setError(err.response.data.message)
     }
@@ -42,13 +42,13 @@ const Home = () => {
         <h1 className='display-3'>notes & quotes</h1>
       </div>
       <div className='home-article'>
-        <h2>welcome.</h2>
+        <h2>welcome. log in to catch up with your community of positive notemakers</h2>
         <div className='flex-container'>
           <div className='login-form-wrapper'>
             <form className='login-form' onSubmit={handleSubmit}>
-              <label for='email'>email</label>
+              <label htmlFor='email'>email</label>
               <input type='email' placeholder='email address' id='email' name='email' onChange={handleChange} />
-              <label for='password'>password</label>
+              <label htmlFor='password'>password</label>
               <input type='password' placeholder='*******' id='password' name='password' onChange={handleChange} />
               <button type='submit'>Log In</button>
             </form>

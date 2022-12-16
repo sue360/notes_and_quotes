@@ -1,6 +1,7 @@
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 // import { isOwner, getToken } from '../../components/helpers/auth'
 
 // Bootstrap Components
@@ -19,6 +20,7 @@ const Singlenote = () => {
   const [updateField, setUpdateField ] = useState({
     Content: '',
   })
+  const navigate = useNavigate()
 
   //function to update state with uploads from the upload field
   const handleContentUpdate = (e) => {
@@ -31,6 +33,7 @@ const Singlenote = () => {
       const { data } = await axios.put(`/notes/${id}/`, updateField)
       console.log(data)
       setUpdateField({Content: ''})
+      navigate('/gallery') //page to move on to
     } catch (err) {
       console.log(err)
     }
@@ -41,6 +44,7 @@ const Singlenote = () => {
   const handleNoteDelete = async () => {
     try{
       await axios.delete(`/notes/${id}/`)
+       //page to move on to
     } catch (err) {
       console.log(err)
     }

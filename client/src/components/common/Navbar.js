@@ -23,6 +23,9 @@ const HomePageNavbar = () => {
         <li>
           <Link to='/upload'>upload |</Link>
         </li>
+        <li>
+          <Link>logout</Link>
+        </li>
       </ul>
 
     </nav>
