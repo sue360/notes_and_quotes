@@ -57,6 +57,19 @@ jotting down ideas. I used Excalidraw to create wireframes too, to ensure that I
 
 ![trello_p4](https://user-images.githubusercontent.com/113911812/212493359-389ab691-ede2-4022-922f-43978cb03a0d.png)
 
+proved useful when I encountered technical difficulties - I might have lost more work (and time) had I not set up and pushed to GitHub from early on.
+
+
+Build
+
+I started by setting up the backend. I anticipated that this would be the most challenging part of the build, as I had more experience with the technologies that would be required for the front end. For the backend, I used a Django framework and Python to set up routes for users to add, delete and update text (‘notes’). I tested each route using Insomnia, which took longer than I had hoped, due to small bugs and syntax errors, such as in the screenshot below.
+
+![p4_codesnippet](https://user-images.githubusercontent.com/113911812/212493411-d43d6030-504d-4b47-813e-fdaafe5c3b4a.png)
+
+
+
+
+
 
 
 
