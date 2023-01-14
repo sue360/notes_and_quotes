@@ -55,6 +55,7 @@ Due to the tight deadline and the complexity of technologies involved, which wer
 jotting down ideas. I used Excalidraw to create wireframes too, to ensure that I had a clear idea of what each page would require before I started building, and to plan out how the site would look. This was important for streamlining the site’s aesthetic, and for managing my own ambitions, as working alone meant that I had to be more deliberate in balancing possibility with feasibility, and at times reign in more expansive ideas for the app and focus on what might be achievable. I’ve included an image above. Finally, and perhaps most importantly, I made use of GitHub for version control and backup. This 
 
 
+![trello_p4](https://user-images.githubusercontent.com/113911812/212493359-389ab691-ede2-4022-922f-43978cb03a0d.png)
 
 
 
