@@ -116,6 +116,51 @@ Code to exit the shell:
  
 
  I was really pleased with the final design for the front end, illustrated in the images below. I was also pleased to find that it did not take long to set this up, and that I had grown more confident in design e.g. for buttons, forms and images. I used Midjourney to generate images to illustrate the site. This created an aesthetic that felt expansive and artistic. I used lower case text throughout, to add to the relaxed, modern feel and to create a space that might be used like a personal notepad or journal.
+ 
+ ![loginp4](https://user-images.githubusercontent.com/113911812/212493689-2d3afadb-9b6a-4ab5-967a-2c48b1d50c57.png)
+![notes_p4](https://user-images.githubusercontent.com/113911812/212493690-e2c58d21-a0f2-42a6-862a-7821e35344a6.png)
+![p4_screenshot](https://user-images.githubusercontent.com/113911812/212493691-bdb708bf-eccc-4d1d-8950-4618d30961be.png)
+![share_notep4](https://user-images.githubusercontent.com/113911812/212493692-c4e0d31f-001b-41a1-9b88-3c45e0c274f6.png)
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Challenges
+ 
+Technical issue on my machine - on day two I had an issue with my Mac, which cost a lot of time.
+Working independently under pressure - the tight deadline meant that I felt a little rushed throughout. Working on a full stack app shone a light on the aspects of programming that I was least experienced in. Where working in a group allowed me to lean into my strengths and check in with collaborators for advice, working independently challenged me to make use of more online tutorials.
+I was short on time so could not add in all the functionality that I would have liked to. Also, my code, though functional, could have been cleaner/more concise in places.
+
+Wins
+
+Design and styling - I was really pleased with the aesthetic I created.
+Gained more experience in working independently
+Gained more experience working with Python and Django.
+
+
+Key Learnings/Takeaways
+
+If uncertain, never delete files!
+Ways of working around errors - e.g. using a separate terminal to run the frontend server.
+The importance of taking breaks/finding ways to stay motivated if and when things go wrong.
+The importance of starting out with a very simple MVP to avoid disappointment if and when things go wrong.
+
+Bugs
+
+It is currently possible for any user to edit any other user’s note (my work on the secure route is not yet complete)
+Logout functionality is not yet set up - so I have left the site open to be viewed, without the requirement for authentication.
+
+Future Improvements
+
+I originally wanted to include comments, to allow users to discuss the ‘quotes’ which appear on their homepage, but I was short on time, and encountered errors when setting this functionality up on the backend. With more time I would have added this in, as well as complete authentication to make it possible to show which users have commented.
+I originally wanted to make the landing page more dynamic, with quotes on a carousel. However, I did not have enough time to incorporate this feature. The site might feel more dynamic and engaging with a moving carousel of quotes.
+I could expand on the ‘quotes’ side of the app by adding functionality for users to save their favourite quotes, or to ‘like’ or ‘upvote’ quotes. I could also seed a greater number of quotes and set them to refresh with new entries for each user daily.
+
 
 
 
