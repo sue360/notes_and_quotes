@@ -66,6 +66,60 @@ I started by setting up the backend. I anticipated that this would be the most c
 
 ![p4_codesnippet](https://user-images.githubusercontent.com/113911812/212493411-d43d6030-504d-4b47-813e-fdaafe5c3b4a.png)
 
+Some of these errors resulted from rushing - after running short on time in the previous project, I was keen to set up the front end soon as design would play an important role in this application, due to the theme of promoting optimism and peace of mind. It was disheartening to find that the backend was trickier than I had anticipated, but I kept in mind all that I was learning from the process. Working independently at times made it challenging to stay motivated throughout. I enjoyed the daily stand ups, during which fellow students shared their progress and challenges they had encountered.
+
+The code snippet below shows the function for updating a single note, followed by the function for deleting a note. These functions were trickier but I was pleased when they worked.
+
+#updating a single note
+ def put(self, request, pk):
+     note = self.get_note(pk)
+     try:
+       note_to_update = NoteSerializer(note, request.data, partial=True)
+       if note_to_update.is_valid():
+           note_to_update.save()
+           return Response(note_to_update.data, status.HTTP_202_ACCEPTED)
+       print(note_to_update.errors)
+       return Response(note_to_update.errors, status.HTTP_422_UNPROCESSABLE_ENTITY)
+     except Exception as e:
+       return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+ 
+   #delete a single note
+ 
+ def delete(self, _request, pk):
+       note_to_delete = self.get_note(pk)
+       try:
+           note_to_delete.delete()
+           return Response(status=status.HTTP_204_NO_CONTENT)
+       except Exception as e:
+           return Response(str(e), status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+Once the backend was complete, I ran the create react app command to start working on the front end. After running this command, I was alarmed to find new files had appeared on my machine in an unexpected place. Initially I deleted them, assuming I’d run the command from the wrong place. However, my machine ran into errors, and VSCode became difficult to use. I tried to restore the deleted files but the system failures persisted. I lost days of work over the weekend as a result of this error. The effects reached beyond what was initially noticeable, and when I later ran commands, I found various programmes were no longer installed. This was the most challenging disruption I had encountered on a project so far, but I learned a lot from it. Not least that when uncertain, it is best not to delete files - even if they appear to be in the wrong place. 
+
+![error_p4](https://user-images.githubusercontent.com/113911812/212493476-8262ff27-94a1-4b36-bd02-c03313d814c2.png)
+
+Another consequence of this error was that I could not exit the shell when working on the backend. This proved frustrating, but I got around this by programming front end features using the terminal outside of VSCode as illustrated in the screenshot to the right. (The screenshot also shows one of the errors I encountered which resulted from deleting important files - ‘zsh: command not found’. Many of the commands I relied on and had used before no longer worked). Though this took getting used to, it shifted (and improved!) my understanding of how the terminal works, and of how the frontend and backend work together.
+
+It was only at the end of the project that I was able to exit the shell, by adding in the final line in the code snippet below. During the build phase, I focused on working around challenges, which proved useful in getting an MVP set up with the tight deadline I had.
+
+Code to exit the shell:
+   "explorer.compactFolders": false,
+   "workbench.iconTheme": "file-icons",
+   "workbench.startupEditor": "none",
+   "workbench.editorAssociations": {
+     "*.zip": "default",
+     "*.wav": "default"
+   },
+   "python.terminal.activateEnvironment": false
+}
+
+ 
+
+ I was really pleased with the final design for the front end, illustrated in the images below. I was also pleased to find that it did not take long to set this up, and that I had grown more confident in design e.g. for buttons, forms and images. I used Midjourney to generate images to illustrate the site. This created an aesthetic that felt expansive and artistic. I used lower case text throughout, to add to the relaxed, modern feel and to create a space that might be used like a personal notepad or journal.
+
+
+
+
 
 
 
